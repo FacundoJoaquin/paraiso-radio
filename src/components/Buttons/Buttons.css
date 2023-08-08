@@ -1,0 +1,63 @@
+.button-controller {
+  display: flex;
+}
+
+.play,
+.pause {
+  background-color: #dc202a;
+  height: 4rem;
+  width: 11rem;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: scale(.9);
+}
+
+.play.active {
+  background-color: #c21e26;
+    transform: scale(1);
+
+}
+
+.pause.active {
+  background-color: #c21e26;
+    transform: scale(1);
+
+}
+
+.play svg,
+.pause svg {
+  height: 2.5rem;
+  color: white;
+}
+
+@media (max-width: 350px){
+  .play, .pause {
+    height: 1rem;
+    width: 2.5rem;
+  }
+  .play svg, .pause svg{
+    width: .9rem;
+  }
+}
+@media (min-width: 350px){
+  .play, .pause {
+    height: 1.5rem;
+    width: 4rem;
+  }
+  .play svg, .pause svg {
+    width: 1rem;
+  }
+}
+
+@media (min-width: 700px){
+  .play, .pause {
+    height: 2.5rem;
+    width: 6.5rem;
+  }
+  .play svg, .pause svg {
+    width: 2rem;
+  }
+}
