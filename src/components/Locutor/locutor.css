@@ -57,6 +57,9 @@
     .radio-programa h2 {
         font-size: 1rem;
     }
+    .radio-programa img {
+        width: 5rem;
+    }
 }
 @media (min-width: 300px) {
     .locutor-container {
