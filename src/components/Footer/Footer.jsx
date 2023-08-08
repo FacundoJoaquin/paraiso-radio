@@ -7,11 +7,11 @@ import youtube from "../../assets/youtube.png";
 
 import "./footer.css";
 const Footer = () => {
-  const urlFacebook = "https://www.facebook.com/Paraisofm"
-  const urlTwitter = "https://twitter.com/1Paraisofm96"
-  const urlInstagram = "https://www.instagram.com/paraisofm96.1/"
-  const urlTiktok = "https://www.tiktok.com/@paraisofm961"
-  const urlYoutube = "#"
+  const urlFacebook = "https://www.facebook.com/LU17com"
+  const urlTwitter = "https://twitter.com/lu17com"
+  const urlInstagram = "https://www.instagram.com/lu.17_com/"
+  const urlTiktok = "https://www.tiktok.com/@lu17.com"
+  const urlYoutube = "https://www.youtube.com/@Lu17com"
 
   return (
     <div className="footer-component">
