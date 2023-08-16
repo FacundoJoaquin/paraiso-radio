@@ -1,4 +1,3 @@
-import aire from '../../assets/aire.png'
 import './banner.css'
 
 

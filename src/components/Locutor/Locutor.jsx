@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import paraisoLogo from "../../assets/paraisoLogo.png";
 import "./locutor.css";
-import messiImage from "../../assets/messi.png";
+import la100bs from "../../assets/la100bs.png";
 import darioJara from "../../assets/darioJara.png";
 import karinaLorre from "../../assets/karinaLorre.png";
 
@@ -14,7 +14,7 @@ const Locutor = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTime(new Date());
-    }, 60000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -31,7 +31,6 @@ const Locutor = () => {
     ];
     const dayOfWeekName = daysOfWeek[currentTime.getDay()];
     setCurrentDay(dayOfWeekName);
-    console.log(currentDay);
   }, [currentTime, currentDay]);
 
   useEffect(() => {
@@ -44,7 +43,7 @@ const Locutor = () => {
           setTitleToShow("LA MAÑANA DE PARAÍSO");
           break;
         default:
-          setImageToShow(messiImage); //FALTA ASSET DE LA100
+          setImageToShow(la100bs); //FALTA ASSET DE LA100
           setTitleToShow("LA100");
           break;
       }
@@ -55,14 +54,14 @@ const Locutor = () => {
           setTitleToShow("LA GRAN MAÑANA");
           break;
         default:
-          setImageToShow(messiImage); //FALTA ASSET DE LA100
+          setImageToShow(la100bs); //FALTA ASSET DE LA100
           setTitleToShow("LA100");
           break;
       }
     } else if (currentDay === "Domingo") {
       switch (true) {
         default:
-          setImageToShow(messiImage); //FALTA ASSET DE LA100
+          setImageToShow(la100bs); //FALTA ASSET DE LA100
           setTitleToShow("LA100");
           break;
       }
@@ -75,7 +74,17 @@ const Locutor = () => {
         <img src={paraisoLogo} alt="" />
         <h2>{titleToShow}</h2>
       </div>
-      <img src={imageToShow} className="locutor-img" alt="locutor" />
+      <img
+        src={imageToShow}
+        className="locutor-img"
+        alt="locutor"
+        style={{
+          height:
+            imageToShow.includes("la100bs")
+              ? "65%"
+              : "auto",
+        }}
+      />
     </div>
   );
 };

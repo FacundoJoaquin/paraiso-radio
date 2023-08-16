@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
+    justify-content: space-around;
 }
 .radio-programa {
     width: 100%;
@@ -11,14 +11,15 @@
     align-items: center;
     margin-left: 15%;
     gap: 5%;
+    max-height: 4rem;
 }
 .radio-programa h2 {
     font-family: Prompt, sans-serif;
-    font-weight: 500;
+    font-weight: 800;
 
 }
 .radio-programa img {
-    width: 6rem;
+    width: 8rem;
 }
 .locutor-img {
     height: 80%;
@@ -37,35 +38,44 @@
 
 }
 @media (min-width: 768px) {
-
+    .locutor-container {
+        justify-content: space-between;
+    }
     .radio-programa {
         margin: 0;
-        justify-content: center;
+        justify-content: space-around;
         gap: 20%;
-        height: 10%;
+        height: 100%;
     }
     .radio-programa img {
-        width: 7rem;
+        width: 9rem;
     }
     .radio-programa h2 {
         font-size: 2rem;
     }
 }
 
+@media (max-width: 520px) {
+    .special-width {
+        height: 50%;
+    }
+}
 
 @media (min-width: 300px) and (max-width: 415px) {
+    .special-width {
+        height: 40%;
+ 
+    }
     .radio-programa h2 {
         font-size: 1rem;
-    }
-    .radio-programa img {
-        width: 5rem;
     }
 }
 @media (min-width: 300px) {
     .locutor-container {
         width: 100%;
     }
-    .radio-programa {
+    .radio-programa {        margin-top: 1.2rem;
+
         display: flex;
         justify-content: center;
         margin-left: 0;

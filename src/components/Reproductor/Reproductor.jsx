@@ -7,8 +7,7 @@ import volumeDown from "../../assets/volume-down.svg";
 
 const Reproductor = () => {
   const audioRef = useRef(null);
-  console.log(audioRef);
-  const [volume, setVolume] = useState(1);
+  const [volume, setVolume] = useState(0.5);
   const [isPlaying, setIsPlaying] = useState(false); // Estado para rastrear la reproducción
 
   const handlePlay = () => {
@@ -28,13 +27,13 @@ const Reproductor = () => {
   };
 
   const getSliderBackground = () => {
-    const percentage = ((volume - 0) / (2 - 0)) * 100;
+    const percentage = ((volume - 0) / (1 - 0)) * 100;
     return `linear-gradient(to right, #DC202A ${percentage}%, #C3C7C6 ${percentage}%)`;
   };
 
   const handleVolumeUp = () => {
-    if (volume < 2) {
-      const newVolume = parseFloat(volume) + 0.2;
+    if (volume < 1) {
+      const newVolume = parseFloat(volume) + 0.1;
       setVolume(newVolume);
       audioRef.current.volume = newVolume;
     }
@@ -42,7 +41,7 @@ const Reproductor = () => {
 
   const handleVolumeDown = () => {
     if (volume > 0) {
-      const newVolume = parseFloat(volume) - 0.2;
+      const newVolume = parseFloat(volume) - 0.1;
       setVolume(newVolume);
       audioRef.current.volume = newVolume;
     }
@@ -51,7 +50,7 @@ const Reproductor = () => {
   return (
     <div className="reproductor-container">
       <audio ref={audioRef} controls>
-        <source src="https://radios.lu17.com:8401/livehd" type="audio/mpeg" />
+        <source src="https://radios.lu17.com:8402/PARAISOFM" type="audio/mpeg" />
       </audio>
 
       <div className="volume-bar-container">
@@ -67,8 +66,8 @@ const Reproductor = () => {
           className="volume-controller"
           type="range"
           min="0"
-          max="2"
-          step="0.2"
+          max="1"
+          step="0.1"
           value={volume}
           onInput={handleVolumeChange}
           style={{ background: getSliderBackground() }}
