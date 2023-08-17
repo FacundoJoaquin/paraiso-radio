@@ -23,6 +23,7 @@
 }
 .locutor-img {
     height: 80%;
+    overflow: hidden;
 }
 
 @media (max-width: 350px){

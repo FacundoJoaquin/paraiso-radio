@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import paraisoLogo from "../../assets/paraisoLogo.png";
 import "./locutor.css";
-import la100bs from "../../assets/la100bs.png";
+import logoBaires from "../../assets/logo-baires.png";
 import darioJara from "../../assets/darioJara.png";
 import karinaLorre from "../../assets/karinaLorre.png";
 
@@ -43,7 +43,7 @@ const Locutor = () => {
           setTitleToShow("LA MAÑANA DE PARAÍSO");
           break;
         default:
-          setImageToShow(la100bs); //FALTA ASSET DE LA100
+          setImageToShow(logoBaires); //FALTA ASSET DE LA100
           setTitleToShow("LA100");
           break;
       }
@@ -54,14 +54,14 @@ const Locutor = () => {
           setTitleToShow("LA GRAN MAÑANA");
           break;
         default:
-          setImageToShow(la100bs); //FALTA ASSET DE LA100
+          setImageToShow(logoBaires); //FALTA ASSET DE LA100
           setTitleToShow("LA100");
           break;
       }
     } else if (currentDay === "Domingo") {
       switch (true) {
         default:
-          setImageToShow(la100bs); //FALTA ASSET DE LA100
+          setImageToShow(logoBaires); //FALTA ASSET DE LA100
           setTitleToShow("LA100");
           break;
       }
@@ -80,7 +80,7 @@ const Locutor = () => {
         alt="locutor"
         style={{
           height:
-            imageToShow.includes("la100bs")
+            imageToShow.includes("logo")
               ? "65%"
               : "auto",
         }}

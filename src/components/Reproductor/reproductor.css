@@ -8,6 +8,7 @@
   justify-content: center;
   padding: .4rem 0;
   max-height: 4rem;
+  
 }
 
 .reproductor-container audio {
@@ -31,7 +32,7 @@
   /* Establecer el ancho y alto del control deslizante */
   width: 15rem;
   height: 10px;
-
+  
   /* Establecer el color del riel del control deslizante */
   border-radius: 3px;
   
