@@ -41,7 +41,6 @@ const Locutor = () => {
         case currentHour >= 9 && currentHour < 13:
           setImageToShow(darioJara);
           setTitleToShow("LA MAÑANA DE PARAÍSO");
-          console.log('se actualizo');
           break;
         default:
           setImageToShow(logoBaires); //FALTA ASSET DE LA100
@@ -52,7 +51,7 @@ const Locutor = () => {
       switch (true) {
         case currentHour >= 17 && currentHour < 22:
           setImageToShow(karinaLorre);
-          setTitleToShow("LA GRAN MAÑANA");
+          setTitleToShow("LA PREVIA");
           break;
         default:
           setImageToShow(logoBaires); //FALTA ASSET DE LA100
